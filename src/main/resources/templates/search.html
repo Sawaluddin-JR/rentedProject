@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        .car-card {
+            display: flex;
+            margin-bottom: 20px;
+            border: 3px solid #0766AD;
+            padding: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+
+        }
+
+        .car-image {
+            flex: 0 0 150px;
+            /* Set the width of the image */
+            margin-right: 20px;
+        }
+
+        .car-details {
+            flex: 1;
+        }
+
+        .car-price {
+            flex: 0 0 150px;
+            /* Set the width of the price section */
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .car-card:hover {
+            border-color: #007bff;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+        }
+
+        .price {
+            color: rgb(0, 68, 255);
+            font-weight: bold;
+        }
+
+        /*  */
+        .info-panel {
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            margin-top: -30px;
+            background-color: white;
+        }
+
+        .tulisan {
+            font-size: 17px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <a th:href="@{/data-mobil}"></a> -->
+    <img importance="low" loading="lazy" src="bgbiru.webp" alt="" height="220px" decoding="async" width="100%"
+        style="object-fit: cover; object-position: 50% 50%;">
+    <div class="satu dua tiga empat lima enam"></div>
+
+
+    <!-- info panel -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-11 info-panel">
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="text-muted">Rental mobil /Tanpa sopir </div>
+                        <div class="tulisan">Car Rental Without driver</div>
+                        <div class="text-muted">Soekarno Hatta International Airport (CGK) • Rab, 06 Des 2023 09:00 -
+                            Jum, 08 Des 2023 09:00 </div>
+                    </div>
+                    <div class="col-lg-auto">
+                        <!-- Spasi kosong (Auto-sized column) -->
+                    </div>
+                    <div class="col-lg-auto">
+                        <!-- Tombol Pencarian -->
+                        <a href="#s"></a>
+                        <button class="btn btn-primary me-3 mt-2">
+                            <i class='bx bx-search'></i>Ganti Pencarian</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-4">
+        <div class="car-card">
+            <div class="car-image">
+                <img src="toyotafortuner.webp" class="img-fluid rounded-start" alt="Car Image">
+            </div>
+            <div class="car-details">
+                <h5 class="card-title">Toyota Fortuner</h5>
+                <p class="card-text">
+                    Automatic <br>
+                    <i class='bx bxs-briefcase-alt'></i>
+                    2 bagasi <i class='bx bx-handicap'></i>4 kursi
+
+                </p>
+            </div>
+            <div class="car-price">
+                <p class="price"> 2.779.555 /day</p>
+                <a href="penyedia.html" class="btn btn-primary">Booking</a>
+            </div>
+        </div>
+        <div class="car-card">
+            <div class="car-image">
+                <img src="daihatsu.webp" class="img-fluid rounded-start" alt="Car Image">
+            </div>
+            <div class="car-details">
+                <h5 class="card-title">Daihatsu Ayla</h5>
+                <p class="card-text">
+                    Automatic <br><i class='bx bxs-briefcase-alt'></i>
+                    2 bagasi <i class='bx bx-handicap'></i>
+                    4 kursi
+                </p>
+            </div>
+            <div class="car-price">
+                <p class="price"> Rp 235.333/day</p>
+                <a href="penyedia.html" class="btn btn-primary">Booking</a>
+            </div>
+        </div>
+        <div class="car-card">
+            <div class="car-image">
+                <img src="toyotaagya.webp" class="img-fluid rounded-start" alt="Car Image">
+            </div>
+            <div class="car-details">
+                <h5 class="card-title">Toyota Agya</h5>
+                <p class="card-text">
+                    Automatic <br><i class='bx bxs-briefcase-alt'></i>
+                    2 bagasi <i class='bx bx-handicap'></i>
+                    4 kursi
+                </p>
+            </div>
+            <div class="car-price">
+                <p class="price"> Rp 2.779.555 /hari</p>
+                <a href="penyedia.html" class="btn btn-primary">Booking</a>
+            </div>
+        </div>
+        <div class="car-card">
+            <div class="car-image">
+                <img src="avanza.webp" class="img-fluid rounded-start" alt="Car Image">
+            </div>
+            <div class="car-details">
+                <h5 class="card-title">Toyota Grand New Avanza</h5>
+                <p class="card-text">
+                    Manual <br><i class='bx bxs-briefcase-alt'></i>
+                    2 bagasi <i class='bx bx-handicap'></i>
+                    4 kursi
+                </p>
+            </div>
+            <div class="car-price">
+                <p class="price">Rp 2.779.555 /hari</p>
+                <a href="penyedia.html" class="btn btn-primary">Booking</a>
+            </div>
+        </div>
+        <div class="car-card">
+            <div class="car-image">
+                <img src="dai.webp" class="img-fluid rounded-start" alt="Car Image">
+            </div>
+            <div class="car-details">
+                <h5 class="card-title">Daihatsu Ayla</h5>
+                <p class="card-text">
+                    Manual <br><i class='bx bxs-briefcase-alt'></i>
+                    2 bagasi <i class='bx bx-handicap'></i>
+                    4 kursi
+                </p>
+            </div>
+            <div class="car-price">
+                <p class="price">Rp 290.555 /hari</p>
+                <a href="penyedia.html" class="btn btn-primary">Booking</a>
+            </div>
+        </div>
+        <div class="car-card">
+            <div class="car-image">
+                <img src="xenia.webp" class="img-fluid rounded-start" alt="Car Image">
+            </div>
+            <div class="car-details">
+                <h5 class="card-title">Daihatsu Xenia</h5>
+                <p class="card-text">
+                    Automatic <br><i class='bx bxs-briefcase-alt'></i>
+                    2 bagasi <i class='bx bx-handicap'></i>
+                    4 kursi
+                </p>
+            </div>
+            <div class="car-price">
+                <p class="price"> Rp 295.333 /hari
+                </p>
+                <a href="penyedia.html" class="btn btn-primary">Booking</a>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <div class="car-image">
+                <img src="ben.webp" class="img-fluid rounded-start" alt="Car Image">
+            </div>
+            <div class="car-details">
+                <h5 class="card-title">Mercedes-Benz E-200</h5>
+                <p class="card-text">
+                    Automatic <br><i class='bx bxs-briefcase-alt'></i>
+                    2 bagasi <i class='bx bx-handicap'></i>
+                    3 kursi
+                </p>
+            </div>
+            <div class="car-price">
+                <p class="price"> Rp 5.820.555/hari</p>
+                <a href="penyedia.html" class="btn btn-primary">Booking</a>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <div class="car-image">
+                <img src="alpar.webp" class="img-fluid rounded-start" alt="Car Image">
+            </div>
+            <div class="car-details">
+                <h5 class="card-title">Toyota All New Alphard Facelift 2023</h5>
+                <p class="card-text">
+                    Automatic <br><i class='bx bxs-briefcase-alt'></i>
+                    3 bagasi <i class='bx bx-handicap'></i>
+                    6 kursi
+                </p>
+            </div>
+            <div class="car-price">
+                <p class="price"> Rp 3.547.555/hari</p>
+                <a href="penyedia.html" class="btn btn-primary">Booking</a>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <div class="car-image">
+                <img src="c200.webp" class="img-fluid rounded-start" alt="Car Image">
+            </div>
+            <div class="car-details">
+                <h5 class="card-title">Mercedes-Benz C-200</h5>
+                <p class="card-text">
+                    Automatic <br><i class='bx bxs-briefcase-alt'></i>
+                    3 bagasi <i class='bx bx-handicap'></i>
+                    6 kursi
+                </p>
+            </div>
+            <div class="car-price">
+                <p class="price"> Rp 2.788.555/hari</p>
+                <a href="penyedia.html" class="btn btn-primary">Booking</a>
+            </div>
+        </div>
+
+
+        <div class="car-card">
+            <div class="car-image">
+                <img src="hondacivis.webp" class="img-fluid rounded-start" alt="Car Image">
+            </div>
+            <div class="car-details">
+                <h5 class="card-title">Honda Civic</h5>
+                <p class="card-text">
+                    Automatic <br><i class='bx bxs-briefcase-alt'></i>
+                    2 bagasi <i class='bx bx-handicap'></i>
+                    4 kursi
+                </p>
+            </div>
+            <div class="car-price">
+                <p class="price"> Rp 2.475.368/hari</p>
+                <a href="penyedia.html" class="btn btn-primary">Booking</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
